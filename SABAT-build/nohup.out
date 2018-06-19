@@ -1,0 +1,56 @@
+
+-------- EEEE ------- G4Exception-START -------- EEEE -------
+*** G4Exception : PART70000
+      issued by : G4NuclideTable
+G4ENSDFSTATEDATA environment variable must be set
+*** Fatal Exception *** core dump ***
+-------- EEEE -------- G4Exception-END --------- EEEE -------
+
+
+*** G4Exception: Aborting execution ***
+Command terminated by signal 6
+0.01user 0.00system 0:00.11elapsed 16%CPU (0avgtext+0avgdata 30056maxresident)k
+0inputs+8outputs (0major+1558minor)pagefaults 0swaps
+
+-------- EEEE ------- G4Exception-START -------- EEEE -------
+*** G4Exception : PART70000
+      issued by : G4NuclideTable
+G4ENSDFSTATEDATA environment variable must be set
+*** Fatal Exception *** core dump ***
+-------- EEEE -------- G4Exception-END --------- EEEE -------
+
+
+*** G4Exception: Aborting execution ***
+Command terminated by signal 6
+0.01user 0.00system 0:00.13elapsed 18%CPU (0avgtext+0avgdata 30204maxresident)k
+0inputs+0outputs (0major+1557minor)pagefaults 0swaps
+
+-------- EEEE ------- G4Exception-START -------- EEEE -------
+*** G4Exception : PART70000
+      issued by : G4NuclideTable
+G4ENSDFSTATEDATA environment variable must be set
+*** Fatal Exception *** core dump ***
+-------- EEEE -------- G4Exception-END --------- EEEE -------
+
+
+*** G4Exception: Aborting execution ***
+
+-------- EEEE ------- G4Exception-START -------- EEEE -------
+*** G4Exception : PART70000
+      issued by : G4NuclideTable
+G4ENSDFSTATEDATA environment variable must be set
+*** Fatal Exception *** core dump ***
+-------- EEEE -------- G4Exception-END --------- EEEE -------
+
+
+*** G4Exception: Aborting execution ***
+
+-------- EEEE ------- G4Exception-START -------- EEEE -------
+*** G4Exception : PART70000
+      issued by : G4NuclideTable
+G4ENSDFSTATEDATA environment variable must be set
+*** Fatal Exception *** core dump ***
+-------- EEEE -------- G4Exception-END --------- EEEE -------
+
+
+*** G4Exception: Aborting execution ***

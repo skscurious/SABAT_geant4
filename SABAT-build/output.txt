@@ -1,0 +1,867 @@
+
+*************************************************************
+ Geant4 version Name: geant4-10-03-patch-03 [MT]   (20-October-2017)
+  << in Multi-threaded mode >> 
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+/run/verbose 2
+#
+/testhadr/det/setNbOfAbsor 1
+/run/reinitializeGeometry
+/testhadr/det/setAbsor 1 LaBr3_Ce 15 cm
+/run/reinitializeGeometry
+/testhadr/det/setSizeYZ 15 cm
+/run/reinitializeGeometry
+#
+/run/initialize
+userDetector->Construct() start.
+
+-------------------------------------------------------------
+ ---> The Absorber is 1 layers of:
+ 	    LaBr3_Ce:     15 cm 
+-------------------------------------------------------------
+
+World is registered to the default region.
+physicsList->Construct() start.
+
+ FTFP_BERT_HP : new threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 12 GeV
+ for kaons :   3 to 12 GeV
+ for proton :  3 to 12 GeV
+ for neutron : 3 to 12 GeV
+
+/home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+@@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+@@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 12 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 13 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Capture/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Elastic/CrossSection/8_17_Oxygen
+NeutronHP: /Inelastic file for Z = 8, A = 18 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic/CrossSection/8_17_Oxygen
+
+### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+### ===  Auger cascade flag: 1
+### ===  Ignore cuts flag:   0
+physicsList->CheckParticleList() start.
+physicsList->setCut() start.
+/run/physicsModified
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 12 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 13 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Capture/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Elastic/CrossSection/8_17_Oxygen
+NeutronHP: /Inelastic file for Z = 8, A = 18 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Elastic/CrossSection/8_17_Oxygen
+@@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Capture/CrossSection/8_17_Oxygen
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+
+---------------------------------------------------
+                           Hadronic Processes for GenericIon
+
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 meV/n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 meV/n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV/n ---> 100 TeV/n
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 meV/n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV/n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 meV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV/n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 meV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV/n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 meV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_neutron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 meV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_proton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 meV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV/n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 meV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV/n ---> 100 TeV/n
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 meV/n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for gamma
+
+  Process: photonNuclear
+        Model:            BertiniCascade: 0 meV ---> 10 GeV
+     Cr_sctns:            PhotoNuclearXS: 0 meV ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon+
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: kaon+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 meV ---> 12 GeV
+     Cr_sctns:            Glauber-Gribov: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:  ChipsKaonPlusInelasticXS: 0 meV ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: kaon-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 meV ---> 12 GeV
+     Cr_sctns:            Glauber-Gribov: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns: ChipsKaonMinusInelasticXS: 0 meV ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for lambda
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: lambdaInelastic
+        Model:            BertiniCascade: 0 meV ---> 6 GeV
+        Model:                      FTFP: 2 GeV ---> 100 TeV
+     Cr_sctns:   ChipsHyperonInelasticXS: 0 meV ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for neutron
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 19.5 MeV ---> 100 TeV
+        Model:          NeutronHPElastic: 0 meV ---> 20 MeV
+     Cr_sctns:        NeutronHPElasticXS: 0 meV ---> 20 MeV
+     Cr_sctns:        G4NeutronElasticXS: 0 meV ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: neutronInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 19.9 MeV ---> 12 GeV
+        Model:        NeutronHPInelastic: 0 meV ---> 20 MeV
+     Cr_sctns:      NeutronHPInelasticXS: 0 meV ---> 20 MeV
+     Cr_sctns:       Barashenkov-Glauber: 0 meV ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+  Process: nCapture
+        Model:          NeutronHPCapture: 0 meV ---> 20 MeV
+        Model:               nRadCapture: 19.9 MeV ---> 100 TeV
+     Cr_sctns:        NeutronHPCaptureXS: 0 meV ---> 20 MeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 meV ---> 100 TeV
+     Cr_sctns:        NeutronHPCaptureXS: 0 meV ---> 20 MeV
+     Cr_sctns:          GheishaCaptureXS: 0 meV ---> 100 TeV
+
+  Process: nFission
+        Model:          NeutronHPFission: 0 meV ---> 20 MeV
+        Model:                G4LFission: 19.9 MeV ---> 2.88022e+295 J  
+     Cr_sctns:        NeutronHPFissionXS: 0 meV ---> 20 MeV
+     Cr_sctns:          GheishaFissionXS: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for pi+
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV ---> 1.0001 GeV
+        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 meV ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: pi+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 meV ---> 12 GeV
+     Cr_sctns:      G4CrossSectionPairGG: 0 meV ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for pi-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV ---> 1.0001 GeV
+        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 meV ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: pi-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 meV ---> 12 GeV
+     Cr_sctns:      G4CrossSectionPairGG: 0 meV ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for proton
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 meV ---> 100 TeV
+     Cr_sctns:      ChipsProtonElasticXS: 0 meV ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: protonInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 meV ---> 12 GeV
+     Cr_sctns:       Barashenkov-Glauber: 0 meV ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 meV/n ---> 100 TeV/n
+     Cr_sctns:            GheishaElastic: 0 meV ---> 100 TeV
+
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 meV/n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 meV ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 meV ---> 100 TeV
+
+================================================================
+=======================================================================
+======       Pre-compound/De-excitation Physics Parameters     ========
+=======================================================================
+Type of pre-compound inverse x-section              3
+Type of de-excitation inverse x-section             3
+Min excitation energy (keV)                         0.01
+Level density (1/MeV)                               0.1
+Time limit for long lived isomeres (ns)             1e+12
+Use new data files                                  1
+Use complete data files                             1
+Correlated gamma emission flag                      0
+=======================================================================
+Number of de-excitation channels                    8
+Start closing geometry.
+G4GeometryManager::ReportVoxelStats -- Voxel Statistics
+
+    Total memory consumed for geometry optimisation:   0 kByte
+    Total CPU time elapsed for geometry optimisation: 0 seconds
+
+    Voxelisation: top CPU users:
+    Percent   Total CPU    System CPU       Memory  Volume
+    -------   ----------   ----------     --------  ----------
+       0.00         0.00         0.00            1k World
+       0.00         0.00         0.00            0k SubVolume
+
+    Voxelisation: top memory users:
+    Percent     Memory      Heads    Nodes   Pointers    Total CPU    Volume
+    -------   --------     ------   ------   --------   ----------    ----------
+      64.76          0k         2        6         14         0.00    World
+      35.24          0k         1        4          4         0.00    SubVolume
+G4WT0 > /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT0 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+G4WT0 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT0 > 
+G4WT0 > ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+G4WT0 >           DefaultRegionForTheWorld  1  1  0
+G4WT0 > ### ===  Auger cascade flag: 1
+G4WT0 > ### ===  Ignore cuts flag:   0
+G4WT1 > /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT1 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+G4WT1 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT1 > 
+G4WT1 > ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+G4WT1 >           DefaultRegionForTheWorld  1  1  0
+G4WT1 > ### ===  Auger cascade flag: 1
+G4WT1 > ### ===  Ignore cuts flag:   0
+G4WT2 > /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT2 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+G4WT2 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT2 > 
+G4WT2 > ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+G4WT2 >           DefaultRegionForTheWorld  1  1  0
+G4WT2 > ### ===  Auger cascade flag: 1
+G4WT2 > ### ===  Ignore cuts flag:   0
+G4WT3 > /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT3 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+G4WT3 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT3 > 
+G4WT3 > ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+G4WT3 >           DefaultRegionForTheWorld  1  1  0
+G4WT3 > ### ===  Auger cascade flag: 1
+G4WT3 > ### ===  Ignore cuts flag:   0
+G4WT4 > /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT4 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+G4WT4 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT4 > 
+G4WT4 > ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+G4WT4 >           DefaultRegionForTheWorld  1  1  0
+G4WT4 > ### ===  Auger cascade flag: 1
+G4WT4 > ### ===  Ignore cuts flag:   0
+G4WT5 > /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT5 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+G4WT5 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT5 > 
+G4WT5 > ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+G4WT5 >           DefaultRegionForTheWorld  1  1  0
+G4WT5 > ### ===  Auger cascade flag: 1
+G4WT5 > ### ===  Ignore cuts flag:   0
+G4WT6 > /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT6 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+G4WT6 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT6 > 
+G4WT6 > ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+G4WT6 >           DefaultRegionForTheWorld  1  1  0
+G4WT6 > ### ===  Auger cascade flag: 1
+G4WT6 > ### ===  Ignore cuts flag:   0
+G4WT7 > /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT7 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5/Inelastic
+G4WT7 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /home/analysis/Geant4/Geant4-build/data/G4NDL4.5
+G4WT7 > 
+G4WT7 > ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+G4WT7 >           DefaultRegionForTheWorld  1  1  0
+G4WT7 > ### ===  Auger cascade flag: 1
+G4WT7 > ### ===  Ignore cuts flag:   0
+#
+/testhadr/gun/setDefault
+/gun/particle neutron
+#/gun/ion 11 22
+/gun/energy 14.1 MeV
+/gun/position 0 -38.5 0 cm
+#
+/analysis/setFileName SABAT
+Set file name: SABAT
+/analysis/h1/set 1 290 0. 14.5 MeV
+/analysis/h1/setAscii 1
+/analysis/h1/set 2 290 0. 14.5 MeV
+/analysis/h1/setAscii 2
+/analysis/h1/set 3 290 0. 14.5 MeV
+/analysis/h1/setAscii 3
+/analysis/h1/set 4 290 0. 14.5 MeV
+/analysis/h1/setAscii 4
+/run/printProgress 10000000
+#
+/run/beamOn 1000
+
+Region <DefaultRegionForTheWorld> --  -- appears in <World> world volume
+ This region is in the mass world.
+ Root logical volume(s) : World 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : SeaWater Low_Carbon_Steel Air LaBr3_Ce 
+ Production cuts :   gamma 1 mm      e- 1 mm      e+ 1 mm  proton 0 fm 
+
+Region <DefaultRegionForParallelWorld> --  -- is not associated to any world.
+ Root logical volume(s) : 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : 
+ Production cuts :   gamma 1 mm      e- 1 mm      e+ 1 mm  proton 0 fm 
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes
+ Material : SeaWater
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 0 fm 
+ Energy thresholds :  gamma  3.00044 keV    e-  356.639 keV    e+  344.855 keV proton 0 meV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : Low_Carbon_Steel
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 0 fm 
+ Energy thresholds :  gamma  20.6438 keV    e-  1.29592 MeV    e+  1.21169 MeV proton 0 meV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes
+ Material : Air
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 0 fm 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 0 meV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes
+ Material : LaBr3_Ce
+ Range cuts        :  gamma  1 mm     e-  1 mm     e+  1 mm  proton 0 fm 
+ Energy thresholds :  gamma  31.3139 keV    e-  798.816 keV    e+  757.005 keV proton 0 meV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+====================================================================
+
+### Run 0 starts.
+
+--------- Ranecu engine status ---------
+ Initial seed (index) = 0
+ Current couple of seeds = 9876, 54321
+----------------------------------------
+... open Root analysis file : SABAT.root - done
+G4WT4 > ### Run 0 starts on worker thread 4.
+G4WT3 > ### Run 0 starts on worker thread 3.
+G4WT6 > ### Run 0 starts on worker thread 6.
+G4WT1 > ### Run 0 starts on worker thread 1.
+G4WT0 > ### Run 0 starts on worker thread 0.
+G4WT5 > ### Run 0 starts on worker thread 5.
+G4WT7 > ### Run 0 starts on worker thread 7.
+G4WT2 > ### Run 0 starts on worker thread 2.
+G4WT1 > ... open Root analysis file : SABAT_t1.root - done
+G4WT5 > ... open Root analysis file : SABAT_t5.root - done
+G4WT0 > ... open Root analysis file : SABAT_t0.root - done
+G4WT6 > ... open Root analysis file : SABAT_t6.root - done
+G4WT4 > ... open Root analysis file : SABAT_t4.root - done
+G4WT3 > ... open Root analysis file : SABAT_t3.root - done
+G4WT1 > --> Event 0 starts with initial seeds (15470735,58711377).
+G4WT7 > ... open Root analysis file : SABAT_t7.root - done
+G4WT2 > ... open Root analysis file : SABAT_t2.root - done
+G4WT7 > Thread-local run terminated.
+G4WT7 > Run Summary
+G4WT7 >   Number of events processed : 121
+G4WT7 >   User=14.4s Real=1.8s Sys=0s
+G4WT7 > ... merge Root all H1 :  - done
+G4WT0 > Thread-local run terminated.
+G4WT0 > Run Summary
+G4WT0 >   Number of events processed : 121
+G4WT0 >   User=14.8s Real=1.87s Sys=0s
+G4WT0 > ... merge Root all H1 :  - done
+G4WT4 > Thread-local run terminated.
+G4WT4 > Run Summary
+G4WT4 >   Number of events processed : 121
+G4WT4 >   User=14.9s Real=1.88s Sys=0s
+G4WT4 > ... merge Root all H1 :  - done
+G4WT6 > Thread-local run terminated.
+G4WT6 > Run Summary
+G4WT6 >   Number of events processed : 131
+G4WT6 >   User=15.12s Real=1.93s Sys=0s
+G4WT6 > ... merge Root all H1 :  - done
+G4WT5 > Thread-local run terminated.
+G4WT5 > Run Summary
+G4WT5 >   Number of events processed : 121
+G4WT5 >   User=15.14s Real=1.93s Sys=0s
+G4WT5 > ... merge Root all H1 :  - done
+G4WT3 > Thread-local run terminated.
+G4WT3 > Run Summary
+G4WT3 >   Number of events processed : 121
+G4WT3 >   User=15.17s Real=1.94s Sys=0s
+G4WT3 > ... merge Root all H1 :  - done
+G4WT1 > Thread-local run terminated.
+G4WT1 > Run Summary
+G4WT1 >   Number of events processed : 132
+G4WT1 >   User=15.21s Real=1.96s Sys=0s
+G4WT1 > ... merge Root all H1 :  - done
+G4WT7 > ... write Root file : SABAT_t7.root - done
+G4WT7 > ... write ASCII Root file : SABAT.ascii - done
+G4WT2 > Thread-local run terminated.
+G4WT2 > Run Summary
+G4WT2 >   Number of events processed : 132
+G4WT2 >   User=15.13s Real=1.98s Sys=0s
+G4WT2 > ... merge Root all H1 :  - done
+G4WT0 > ... write Root file : SABAT_t0.root - done
+G4WT0 > ... write ASCII Root file : SABAT.ascii - done
+G4WT4 > ... write Root file : SABAT_t4.root - done
+G4WT4 > ... write ASCII Root file : SABAT.ascii - done
+G4WT6 > ... write Root file : SABAT_t6.root - done
+G4WT1 > ... write Root file : SABAT_t1.root - done
+G4WT3 > ... write Root file : SABAT_t3.root - done
+G4WT5 > ... write Root file : SABAT_t5.root - done
+G4WT3 > ... write ASCII Root file : SABAT.ascii - done
+G4WT6 > ... write ASCII Root file : SABAT.ascii - done
+G4WT1 > ... write ASCII Root file : SABAT.ascii - done
+G4WT5 > ... write ASCII Root file : SABAT.ascii - done
+G4WT2 > ... write Root file : SABAT_t2.root - done
+G4WT2 > ... write ASCII Root file : SABAT.ascii - done
+G4WT7 > ... close Root file : SABAT_t7.root - done
+G4WT7 > ... delete Root empty file : SABAT_t7.root - done
+G4WT0 > ... close Root file : SABAT_t0.root - done
+G4WT0 > ... delete Root empty file : SABAT_t0.root - done
+G4WT4 > ... close Root file : SABAT_t4.root - done
+G4WT4 > ... delete Root empty file : SABAT_t4.root - done
+G4WT1 > ... close Root file : SABAT_t1.root - done
+G4WT3 > ... close Root file : SABAT_t3.root - done
+G4WT6 > ... close Root file : SABAT_t6.root - done
+G4WT5 > ... close Root file : SABAT_t5.root - done
+G4WT3 > ... delete Root empty file : SABAT_t3.root - done
+G4WT1 > ... delete Root empty file : SABAT_t1.root - done
+G4WT6 > ... delete Root empty file : SABAT_t6.root - done
+G4WT5 > ... delete Root empty file : SABAT_t5.root - done
+G4WT2 > ... close Root file : SABAT_t2.root - done
+G4WT2 > ... delete Root empty file : SABAT_t2.root - done
+ Run terminated.
+Run Summary
+  Number of events processed : 1000
+  User=15.29s Real=2.59s Sys=0.02s
+
+ ======================== run summary =====================
+
+ The run is 1000 neutron of 14.1 MeV through 1 absorbers: 
+    1        15 cm  of LaBr3_Ce (density: 5.08 g/cm3 )
+
+ Process calls frequency :
+     RadioactiveDecay=  12236        Transportation=  19665               annihil=    180
+                compt=  34056                  conv=    178                 eBrem=    834
+                eIoni=  41931                 hIoni=  83753            hadElastic=  93289
+              ionIoni=  12301                   msc=   1958              nCapture=    948
+     neutronInelastic=    739                  phot=   4175       protonInelastic=      2
+
+
+ Edep in absorber 1 = 4.59 keV	(220 keV-->4.37 MeV)
+
+ List of generated particles in absorber 1:
+          Ba138:       1  Emean =    8.03 eV 	( 8.03 eV  --> 8.03 eV )
+  Ba138[1435.816]:       1  Emean =     348 meV	( 348 meV --> 348 meV)
+           Br80:       1  Emean =    80.6 eV 	( 80.6 eV  --> 80.6 eV )
+           Kr80:       1  Emean =    9.38 eV 	( 9.38 eV  --> 9.38 eV )
+      anti_nu_e:       1  Emean =     922 keV	( 922 keV --> 922 keV)
+             e+:       1  Emean =    1.77 MeV	( 1.77 MeV --> 1.77 MeV)
+             e-:      15  Emean =     169 keV	( 435 eV  --> 1.08 MeV)
+          gamma:      14  Emean =     742 keV	( 26.2 keV --> 3.44 MeV)
+           nu_e:       1  Emean =     299 keV	( 299 keV --> 299 keV)
+
+ List of particles emerging from absorbers :
+      anti_nu_e:     229  Emean =     692 keV	( 59.3 keV --> 9.3 MeV)
+             e-:       3  Emean =    1.84 MeV	( 214 keV --> 3.77 MeV)
+          gamma:     429  Emean =    1.72 MeV	( 28.9 keV --> 11 MeV)
+        neutron:      18  Emean =    7.14 MeV	( 11.2 eV  --> 14.1 MeV)
+           nu_e:     128  Emean =     297 keV	( 225 keV --> 1.14 MeV)
+
+ Nb of events with primary absorbed = 98 %,   transmit = 0.6 %,   reflected = 1 %
+... write Root file : SABAT.root - done
+... write ASCII Root file : SABAT.ascii - done
+... close Root file : SABAT.root - done
+
+--------- Ranecu engine status ---------
+ Initial seed (index) = 0
+ Current couple of seeds = 78028937, 1993498816
+----------------------------------------
+G4WT7 > UserRunAction deleted.
+G4WT7 > UserPrimaryGenerator deleted.
+G4WT7 > RunManager is deleting RunManagerKernel.
+G4WT0 > UserRunAction deleted.
+G4WT0 > UserPrimaryGenerator deleted.
+G4WT0 > RunManager is deleting RunManagerKernel.
+G4WT7 > EventManager deleted.
+G4WT7 > Units table cleared.
+G4WT7 > Total navigation history collections cleaned: 21
+G4WT7 > ================== Deleting memory pools ===================
+G4WT7 > Pool ID '20G4NavigationLevelRep', size : 0.0317 MB
+G4WT7 > Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+G4WT7 > Pool ID '7G4Event', size : 0.000961 MB
+G4WT7 > Pool ID '15G4PrimaryVertex', size : 0.000961 MB
+G4WT7 > Pool ID '17G4PrimaryParticle', size : 0.000961 MB
+G4WT7 > Pool ID '17G4DynamicParticle', size : 0.0779 MB
+G4WT7 > Pool ID '7G4Track', size : 0.155 MB
+G4WT7 > Pool ID '18G4TouchableHistory', size : 0.00288 MB
+G4WT7 > Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+G4WT7 > Pool ID '17G4ReactionProduct', size : 0.00192 MB
+G4WT7 > Pool ID '10G4Fragment', size : 0.000961 MB
+G4WT7 > Number of memory pools allocated: 11; of which, static: 0
+G4WT7 > Dynamic pools deleted: 11 / Total memory freed: 0.27 MB
+G4WT7 > ============================================================
+G4WT7 > G4Allocator objects are deleted.
+G4WT7 > Thread-local UImanager is to be deleted.
+G4WT7 > There should not be any thread-local G4cout/G4cerr hereafter.
+G4WT0 > EventManager deleted.
+G4WT0 > Units table cleared.
+G4WT0 > Total navigation history collections cleaned: 19
+G4WT0 > ================== Deleting memory pools ===================
+G4WT0 > Pool ID '20G4NavigationLevelRep', size : 0.0288 MB
+G4WT0 > Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+G4WT0 > Pool ID '7G4Event', size : 0.000961 MB
+G4WT0 > Pool ID '15G4PrimaryVertex', size : 0.000961 MB
+G4WT0 > Pool ID '17G4PrimaryParticle', size : 0.000961 MB
+G4WT0 > Pool ID '17G4DynamicParticle', size : 0.0519 MB
+G4WT0 > Pool ID '7G4Track', size : 0.104 MB
+G4WT0 > Pool ID '18G4TouchableHistory', size : 0.00192 MB
+G4WT0 > Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+G4WT0 > Pool ID '17G4ReactionProduct', size : 0.000961 MB
+G4WT0 > Pool ID '10G4Fragment', size : 0.000961 MB
+G4WT0 > Number of memory pools allocated: 11; of which, static: 0
+G4WT0 > Dynamic pools deleted: 11 / Total memory freed: 0.19 MB
+G4WT0 > ============================================================
+G4WT0 > G4Allocator objects are deleted.
+G4WT0 > Thread-local UImanager is to be deleted.
+G4WT0 > There should not be any thread-local G4cout/G4cerr hereafter.
+G4WT4 > UserRunAction deleted.
+G4WT4 > UserPrimaryGenerator deleted.
+G4WT4 > RunManager is deleting RunManagerKernel.
+G4WT4 > EventManager deleted.
+G4WT4 > Units table cleared.
+G4WT4 > Total navigation history collections cleaned: 23
+G4WT4 > ================== Deleting memory pools ===================
+G4WT4 > Pool ID '20G4NavigationLevelRep', size : 0.0346 MB
+G4WT4 > Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+G4WT4 > Pool ID '7G4Event', size : 0.000961 MB
+G4WT4 > Pool ID '15G4PrimaryVertex', size : 0.000961 MB
+G4WT4 > Pool ID '17G4PrimaryParticle', size : 0.000961 MB
+G4WT4 > Pool ID '17G4DynamicParticle', size : 0.0884 MB
+G4WT4 > Pool ID '7G4Track', size : 0.176 MB
+G4WT3 > UserRunAction deleted.
+G4WT4 > Pool ID '18G4TouchableHistory', size : 0.00288 MB
+G4WT4 > Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+G4WT4 > Pool ID '17G4ReactionProduct', size : 0.00192 MB
+G4WT3 > UserPrimaryGenerator deleted.
+G4WT3 > RunManager is deleting RunManagerKernel.
+G4WT4 > Pool ID '10G4Fragment', size : 0.000961 MB
+G4WT4 > Number of memory pools allocated: 11; of which, static: 0
+G4WT4 > Dynamic pools deleted: 11 / Total memory freed: 0.31 MB
+G4WT4 > ============================================================
+G4WT4 > G4Allocator objects are deleted.
+G4WT4 > Thread-local UImanager is to be deleted.
+G4WT4 > There should not be any thread-local G4cout/G4cerr hereafter.
+G4WT3 > EventManager deleted.
+G4WT3 > Units table cleared.
+G4WT3 > Total navigation history collections cleaned: 29
+G4WT3 > ================== Deleting memory pools ===================
+G4WT3 > Pool ID '20G4NavigationLevelRep', size : 0.0442 MB
+G4WT3 > Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+G4WT3 > Pool ID '7G4Event', size : 0.000961 MB
+G4WT3 > Pool ID '15G4PrimaryVertex', size : 0.000961 MB
+G4WT3 > Pool ID '17G4PrimaryParticle', size : 0.000961 MB
+G4WT3 > Pool ID '17G4DynamicParticle', size : 0.0731 MB
+G4WT3 > Pool ID '7G4Track', size : 0.146 MB
+G4WT3 > Pool ID '18G4TouchableHistory', size : 0.00385 MB
+G4WT3 > Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+G4WT3 > Pool ID '17G4ReactionProduct', size : 0.000961 MB
+G4WT3 > Pool ID '10G4Fragment', size : 0.000961 MB
+G4WT3 > Number of memory pools allocated: 11; of which, static: 0
+G4WT3 > Dynamic pools deleted: 11 / Total memory freed: 0.27 MB
+G4WT3 > ============================================================
+G4WT3 > G4Allocator objects are deleted.
+G4WT3 > Thread-local UImanager is to be deleted.
+G4WT3 > There should not be any thread-local G4cout/G4cerr hereafter.
+G4WT1 > UserRunAction deleted.
+G4WT1 > UserPrimaryGenerator deleted.
+G4WT1 > RunManager is deleting RunManagerKernel.
+G4WT1 > EventManager deleted.
+G4WT1 > Units table cleared.
+G4WT1 > Total navigation history collections cleaned: 24
+G4WT1 > ================== Deleting memory pools ===================
+G4WT1 > Pool ID '20G4NavigationLevelRep', size : 0.0356 MB
+G4WT1 > Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+G4WT1 > Pool ID '7G4Event', size : 0.000961 MB
+G4WT1 > Pool ID '15G4PrimaryVertex', size : 0.000961 MB
+G4WT1 > Pool ID '17G4PrimaryParticle', size : 0.000961 MB
+G4WT1 > Pool ID '17G4DynamicParticle', size : 0.0634 MB
+G4WT1 > Pool ID '7G4Track', size : 0.126 MB
+G4WT1 > Pool ID '18G4TouchableHistory', size : 0.00288 MB
+G4WT1 > Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+G4WT1 > Pool ID '17G4ReactionProduct', size : 0.00192 MB
+G4WT1 > Pool ID '10G4Fragment', size : 0.00192 MB
+G4WT1 > Number of memory pools allocated: 11; of which, static: 0
+G4WT1 > Dynamic pools deleted: 11 / Total memory freed: 0.24 MB
+G4WT1 > ============================================================
+G4WT1 > G4Allocator objects are deleted.
+G4WT1 > Thread-local UImanager is to be deleted.
+G4WT1 > There should not be any thread-local G4cout/G4cerr hereafter.
+G4WT6 > UserRunAction deleted.
+G4WT6 > UserPrimaryGenerator deleted.
+G4WT6 > RunManager is deleting RunManagerKernel.
+G4WT6 > EventManager deleted.
+G4WT6 > Units table cleared.
+G4WT6 > Total navigation history collections cleaned: 25
+G4WT6 > ================== Deleting memory pools ===================
+G4WT6 > Pool ID '20G4NavigationLevelRep', size : 0.0385 MB
+G4WT6 > Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+G4WT6 > Pool ID '7G4Event', size : 0.000961 MB
+G4WT6 > Pool ID '15G4PrimaryVertex', size : 0.000961 MB
+G4WT6 > Pool ID '17G4PrimaryParticle', size : 0.000961 MB
+G4WT5 > UserRunAction deleted.
+G4WT6 > Pool ID '17G4DynamicParticle', size : 0.0586 MB
+G4WT5 > UserPrimaryGenerator deleted.
+G4WT5 > RunManager is deleting RunManagerKernel.
+G4WT6 > Pool ID '7G4Track', size : 0.116 MB
+G4WT6 > Pool ID '18G4TouchableHistory', size : 0.00288 MB
+G4WT6 > Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+G4WT6 > Pool ID '17G4ReactionProduct', size : 0.00192 MB
+G4WT6 > Pool ID '10G4Fragment', size : 0.000961 MB
+G4WT6 > Number of memory pools allocated: 11; of which, static: 0
+G4WT6 > Dynamic pools deleted: 11 / Total memory freed: 0.22 MB
+G4WT6 > ============================================================
+G4WT6 > G4Allocator objects are deleted.
+G4WT6 > Thread-local UImanager is to be deleted.
+G4WT6 > There should not be any thread-local G4cout/G4cerr hereafter.
+G4WT5 > EventManager deleted.
+G4WT5 > Units table cleared.
+G4WT5 > Total navigation history collections cleaned: 32
+G4WT5 > ================== Deleting memory pools ===================
+G4WT5 > Pool ID '20G4NavigationLevelRep', size : 0.049 MB
+G4WT5 > Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+G4WT5 > Pool ID '7G4Event', size : 0.000961 MB
+G4WT5 > Pool ID '15G4PrimaryVertex', size : 0.000961 MB
+G4WT5 > Pool ID '17G4PrimaryParticle', size : 0.000961 MB
+G4WT5 > Pool ID '17G4DynamicParticle', size : 0.0721 MB
+G4WT5 > Pool ID '7G4Track', size : 0.144 MB
+G4WT2 > UserRunAction deleted.
+G4WT5 > Pool ID '18G4TouchableHistory', size : 0.00385 MB
+G4WT5 > Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+G4WT5 > Pool ID '17G4ReactionProduct', size : 0.00192 MB
+G4WT5 > Pool ID '10G4Fragment', size : 0.000961 MB
+G4WT2 > UserPrimaryGenerator deleted.
+G4WT2 > RunManager is deleting RunManagerKernel.
+G4WT5 > Number of memory pools allocated: 11; of which, static: 0
+G4WT5 > Dynamic pools deleted: 11 / Total memory freed: 0.28 MB
+G4WT5 > ============================================================
+G4WT5 > G4Allocator objects are deleted.
+G4WT5 > Thread-local UImanager is to be deleted.
+G4WT5 > There should not be any thread-local G4cout/G4cerr hereafter.
+G4WT2 > EventManager deleted.
+G4WT2 > Units table cleared.
+G4WT2 > Total navigation history collections cleaned: 26
+G4WT2 > ================== Deleting memory pools ===================
+G4WT2 > Pool ID '20G4NavigationLevelRep', size : 0.0394 MB
+G4WT2 > Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+G4WT2 > Pool ID '7G4Event', size : 0.000961 MB
+G4WT2 > Pool ID '15G4PrimaryVertex', size : 0.000961 MB
+G4WT2 > Pool ID '17G4PrimaryParticle', size : 0.000961 MB
+G4WT2 > Pool ID '17G4DynamicParticle', size : 0.0692 MB
+G4WT2 > Pool ID '7G4Track', size : 0.137 MB
+G4WT2 > Pool ID '18G4TouchableHistory', size : 0.00288 MB
+G4WT2 > Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+G4WT2 > Pool ID '17G4ReactionProduct', size : 0.00192 MB
+G4WT2 > Pool ID '10G4Fragment', size : 0.000961 MB
+G4WT2 > Number of memory pools allocated: 11; of which, static: 0
+G4WT2 > Dynamic pools deleted: 11 / Total memory freed: 0.26 MB
+G4WT2 > ============================================================
+G4WT2 > G4Allocator objects are deleted.
+G4WT2 > Thread-local UImanager is to be deleted.
+G4WT2 > There should not be any thread-local G4cout/G4cerr hereafter.
+G4 kernel has come to Quit state.
+UserDetectorConstruction deleted.
+UserPhysicsList deleted.
+UserActionInitialization deleted.
+UserWorkerThreadInitialization deleted.
+UserRunAction deleted.
+RunManager is deleting RunManagerKernel.
+EventManager deleted.
+Units table cleared.
+Total navigation history collections cleaned: 3
+================== Deleting memory pools ===================
+Pool ID '20G4NavigationLevelRep', size : 0.00288 MB
+Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+Pool ID '17G4DynamicParticle', size : 0.000961 MB
+Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+Number of memory pools allocated: 4; of which, static: 0
+Dynamic pools deleted: 4 / Total memory freed: 0.0058 MB
+============================================================
+G4Allocator objects are deleted.
+UImanager deleted.
+StateManager deleted.
+RunManagerKernel is deleted. Good bye :)
